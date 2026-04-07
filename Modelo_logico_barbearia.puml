@@ -1,0 +1,32 @@
+@startuml
+
+entity CLIENTE {
+  id_cliente
+  nome
+  whatsapp
+}
+
+entity AGENDAMENTO {
+  id_agendamento
+  data
+  hora
+}
+
+entity SERVICO {
+  id_servico
+  descricao
+  preco
+  duracao
+}
+
+entity PROFISSIONAL {
+  id_profissional
+  nome
+  comissao
+}
+
+CLIENTE ||--o{ AGENDAMENTO : faz
+AGENDAMENTO }o--|| SERVICO : registra
+PROFISSIONAL }o--o{ SERVICO : executa
+
+@enduml
