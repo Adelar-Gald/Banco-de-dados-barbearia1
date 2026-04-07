@@ -72,8 +72,6 @@ As principais regras de negócio consideradas neste projeto são:
 | id_profissional | INT (PK, FK) | Referência ao profissional |
 | id_servico | INT (PK, FK) | Referência ao serviço |
 
-> **Observação:** A tabela `PROFISSIONAL_SERVICO` foi criada para resolver o relacionamento **muitos-para-muitos (N:N)** entre as entidades PROFISSIONAL e SERVICO.
-
 ---
 
 ## Relacionamentos e Cardinalidades
