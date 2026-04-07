@@ -1,0 +1,47 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity CLIENTE {
+  * id_cliente : INT <<PK>>
+  --
+  nome : VARCHAR(100)
+  whatsapp : VARCHAR(20)
+}
+
+entity SERVICO {
+  * id_servico : INT <<PK>>
+  --
+  descricao : VARCHAR(100)
+  preco : DECIMAL(10,2)
+  duracao : INT
+}
+
+entity PROFISSIONAL {
+  * id_profissional : INT <<PK>>
+  --
+  nome : VARCHAR(100)
+  comissao : DECIMAL(5,2)
+}
+
+entity AGENDAMENTO {
+  * id_agendamento : INT <<PK>>
+  --
+  data : DATE
+  hora : TIME
+  id_cliente : INT <<FK>>
+  id_servico : INT <<FK>>
+}
+
+entity PROFISSIONAL_SERVICO {
+  * id_profissional : INT <<PK, FK>>
+  * id_servico : INT <<PK, FK>>
+}
+
+CLIENTE ||--o{ AGENDAMENTO : faz
+SERVICO ||--o{ AGENDAMENTO : registrado_em
+
+PROFISSIONAL ||--o{ PROFISSIONAL_SERVICO : executa
+SERVICO ||--o{ PROFISSIONAL_SERVICO : possui
+
+@enduml
