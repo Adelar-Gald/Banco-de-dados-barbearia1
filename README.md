@@ -100,14 +100,6 @@ Este repositório contém os seguintes arquivos:
 - `modelo_logico_barbearia.puml` → Código fonte do diagrama em PlantUML
 - `modelo_logico_barbearia.png` → Imagem do diagrama lógico gerada
 
----
-
-## Diagrama do Projeto
-
-![Diagrama Lógico Barbearia](02_modelo_logico_barbearia.png)
-
----
-
 ## Autor
 
 Projeto desenvolvido para atividade acadêmica da disciplina de Banco de Dados.
